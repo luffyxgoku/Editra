@@ -1,0 +1,235 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 247, 237);
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px;
+}
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-container {
+  height: 3rem;
+  width: 3rem;
+  transition: transform 0.3s ease-in-out;
+}
+.logo-container:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+.logo-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.logo-container:hover .logo-img {
+  transform: rotate(-10deg);
+}
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.link:hover {
+  background-color: #e49a4a;
+}
+.nav-user-container {
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.nav-userName {
+  color: black;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  cursor: default;
+}
+.nav-userName:hover {
+  background-color: #e49a4a;
+}
+.nav-edit-button {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.nav-input {
+  font-size: 0.9rem;
+  padding: 8px;
+  width: 8vw;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 1vw;
+  margin-left: 5px;
+}
+.nav-submit-button {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  width: 4.5vw;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.nav-close-button {
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  width: 4vw;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav-close-button:hover {
+  background-color: orangered;
+}
+.nav-submit-button:hover {
+  background-color: #e49a4a;
+}
+.nav-edit-button:hover {
+  background-color: #e49a4a;
+}
+@media (max-width: 1024px) {
+  .logo-container {
+    margin-left: 20px;
+    height: 2.4rem;
+    width: 2.4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 247, 237, 0);
+    transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    background-color: rgba(255, 247, 237, 0.9);
+  }
+
+  .link {
+    font-size: 16px;
+    padding: 8px 0;
+    /* width: 100%; */
+    text-align: center;
+    min-width: 6rem;
+    display: inline-block;
+  }
+  .link:hover {
+    background-color: #e49a4a;
+    width: 6rem; /* Expands the hover effect slightly but not full width */
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar-links {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .link {
+    font-size: 1.2rem;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .link {
+    font-size: 1.1rem;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-container {
+    margin-left: 20px;
+    height: 2.2rem;
+    width: 2.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .navbar-links {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .link {
+    font-size: 1.05rem !important;
+    padding: 3px 0;
+  }
+}

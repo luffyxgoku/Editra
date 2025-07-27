@@ -1,0 +1,45 @@
+GET http://localhost:5001/api/blogs
+###
+
+POST http://localhost:5001/api/blogs
+Content-Type: application/json
+
+{
+    "blogTitle": "Mars",
+    "blogImageLink": "https://cdn.pixabay.com/photo/2023/01/16/19/06/mars-7723123_640.jpg",
+    "blogBody": "This is the body "
+}
+###
+
+PUT http://localhost:5001/api/blogs/67a99773874f2e54eadd70d6
+Content-Type: application/json
+
+{
+    "blogTitle": "Earth",
+    "blogImageLink": "https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?cs=srgb&dl=pexels-pixabay-87651.jpg&fm=jpg",
+    "blogBody": "This is the Earth"
+}
+###
+
+DELETE http://localhost:5001/api/blogs/67a999d9931f1e38087ef8b0
+###
+
+POST http://localhost:5001/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Zaid",
+    "email": "zaid@gmail.com",
+    "password": "1234"
+}
+###
+POST http://localhost:5001/api/users/signin
+Content-Type: application/json
+
+{
+     "email": "zaid@gmail.com",
+     "password": "1234"
+}
+###
+POST http://localhost:5001/api/users/signout
+
